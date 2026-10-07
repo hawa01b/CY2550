@@ -43,7 +43,7 @@ An HMAC is different because you need the secret key to create the correct tag. 
 
 ### 4.2 Find the Hybrid Encryption
 
-1. The public-key encrypted packet contains the session key, while the encrypted data packet contains the actual encrypted message.
+1. The public-key encrypted packet contains the session key, while the OCB encrypted packet contains the actual encrypted message.
 
 2. GPG doesn't encrypt the entire message with RSA because RSA is slower and isn't really meant for encrypting large amounts of data. Instead, it uses RSA to protect the smaller session key and then uses faster symmetric encryption for the actual message.
 

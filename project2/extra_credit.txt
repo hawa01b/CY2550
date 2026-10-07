@@ -1,0 +1,18 @@
+Extra Credit
+
+Final plaintext:
+We're no strangers to love
+You know the rules and so do I
+A full commitment's what I'm thinking of
+You wouldn't get this from any other guy
+[The decoded plaintext continues with the lyrics to "Never Gonna Give You Up."]
+
+Operations I used:
+
+1. Unicode/Morse Decode — I normalized the Unicode characters and used the accent marks to reveal Morse code. The caron represented a dot, the inverted breve below represented a dash, and the breve below separated the Morse characters.
+
+2. Morse Decode — I decoded the Morse code into an uppercase ciphertext beginning with NMTOEWUDIIPQVZUD...
+
+3. Vigenère Decode — I used the key "rick" from the hint to decrypt the ciphertext.
+
+4. The final plaintext was the lyrics to "Never Gonna Give You Up."
