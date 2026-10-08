@@ -71,6 +71,7 @@ This version is much closer to how I'd expect you to write it: clear, straightfo
 ### 7.1 Generate Cryptographic Code
 
 AI Assistant: ChatGPT
+
 Exact Prompt: “Write me a Python function that encrypts a file with AES.”
 
 ### 7.2 Critique the AI Code
