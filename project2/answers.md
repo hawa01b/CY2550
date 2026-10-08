@@ -86,8 +86,8 @@ The code also only handles encryption and does not include a secure way to decry
 
 ### 7.3 Fix the Code
 
-  I changed the encryption from AES-CBC to AES-GCM because the biggest problem with the original code was that it encrypted the file without checking its integrity. AES-GCM gives both encryption and authentication, so if someone changes the encrypted file, the authentication check can catch it.
+I changed the original code from AES-CBC to AES-GCM because the original version encrypted the file but did not have a way to check if someone changed the ciphertext. GCM gives me encryption and authentication, so the authentication tag can be used to detect if the encrypted file was tampered with.
 
-  I also added a decryption function that uses decrypt_and_verify(). This makes sure the authentication tag is valid before accepting the decrypted file, so if the ciphertext was changed, the program should fail instead of just accepting it.
+I also changed the way the key is handled. Instead of making the user provide an AES key directly, I use PBKDF2 with SHA-256, a random salt, and 600,000 iterations to turn a password into a 32-byte AES key. This makes the program easier to use without relying on someone to create their own AES key correctly.
 
-  Lastly, I added a check for the key length so the program only accepts valid AES key sizes. The key would still need to be generated and stored securely, but this at least makes sure an invalid AES key is not accidentally used.
+Lastly, I added a decryption function that uses decrypt_and_verify(). This lets the program decrypt the file while also checking the authentication tag, so it should fail if the password is wrong or the encrypted data was changed.
