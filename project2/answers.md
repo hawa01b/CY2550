@@ -129,17 +129,13 @@ You wouldn't get this from any other guy
 How I decoded it:
 
 1. Unicode/Morse Decode
-
 I first normalized the Unicode characters and noticed that the different accent marks represented Morse code. The caron was a dot, the inverted breve below was a dash, and the breve below separated the Morse characters.
 
 2. Morse Decode
-
 After figuring that out, I decoded the Morse code and got an uppercase ciphertext that started with `NMTOEWUDIIPQVZUD...`
 
 3. Vigenère Decode
-
 I then used `rick` from the hint as the Vigenère key to decrypt the ciphertext.
 
 4. Final Result
-
 The final plaintext ended up being the lyrics to "Never Gonna Give You Up," so the extra credit was basically a rickroll.
