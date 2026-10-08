@@ -63,7 +63,7 @@ The recipient's private key.
 Signing gives me integrity and authenticity. It lets someone check that the message actually came from the person who owns the private key and that it was not changed after it was signed. Encryption mainly protects the confidentiality of the message, so it does not automatically prove who created it.
 
 
-## Part 5: SSH Keys
+### Part 5: SSH Keys
 
 Ed25519 can have a much smaller key because it uses a different type of cryptography than RSA and gets its security from a different mathematical problem. Because of that, the number of bits cannot be directly compared, so a 256-bit Ed25519 key is not automatically weaker than a 4096-bit RSA key.    Pasted markdown
 This version is much closer to how I'd expect you to write it: clear, straightforward, not overly technical, but it still shows that you actually understand what you're saying.
