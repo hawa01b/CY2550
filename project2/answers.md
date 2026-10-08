@@ -113,33 +113,3 @@ I changed the original code from AES-CBC to AES-GCM because the original version
 I also changed the way the key is handled. Instead of making the user provide an AES key directly, I use PBKDF2 with SHA-256, a random salt, and 600,000 iterations to turn a password into a 32-byte AES key. This makes the program easier to use without relying on someone to create their own AES key correctly.
 
 Lastly, I added a decryption function that uses decrypt_and_verify(). This lets the program decrypt the file while also checking the authentication tag. If the password is wrong or the encrypted data was changed, verification will fail instead of accepting the data.
-
-
-### Extra Credit
-
-Final plaintext:
-
-We're no strangers to love  
-You know the rules and so do I  
-A full commitment's what I'm thinking of  
-You wouldn't get this from any other guy  
-
-(The rest of the plaintext is lyrics to "Never Gonna Give You Up.")
-
-How I decoded it:
-
-1. Unicode/Morse Decode
-   
-I first normalized the Unicode characters and noticed that the different accent marks represented Morse code. The caron was a dot, the inverted breve below was a dash, and the breve below separated the Morse characters.
-
-3. Morse Decode
-   
-After figuring that out, I decoded the Morse code and got an uppercase ciphertext that started with `NMTOEWUDIIPQVZUD...`
-
-5. Vigenère Decode
-   
-I then used `rick` from the hint as the Vigenère key to decrypt the ciphertext.
-
-7. Final Result
-   
-The final plaintext ended up being the lyrics to "Never Gonna Give You Up," so the extra credit was basically a rickroll.
