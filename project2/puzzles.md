@@ -4,7 +4,7 @@
 
 **Final plaintext:** I got a jar of dirt
 
-**Operations I used:**
+Operations I used:
 
 1. Vigenère Decode — I used the key `dirt`.
 2. QWERTY Substitution Decode — I decoded `QWERTYUIOPASDFGHJKLZXCVBNM` back to the normal alphabet.
@@ -15,7 +15,7 @@
 
 **Final plaintext:** NOT ALL TREASURES SILVER AND GOLD MATE
 
-**Operations I used:**
+Operations I used:
 
 1. Substitution Decode — I used the `CYBERISFUN` mapping to turn the letters back into numbers.
 2. Caesar Box Decrypt — I used a width of 5 and kept the spaces.
